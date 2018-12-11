@@ -1,22 +1,30 @@
 ﻿namespace TestGenerics
 {
-    internal class Pair<T>
+    internal class Pair<TFirst, TSecond>
     {
-        private T first;
-        private T second;
+        private TFirst first;
+        private TSecond second;
 
-        public Pair(T v1, T v2)
+        public Pair(TFirst v1, TSecond v2)
         {
             this.first = v1;
             this.second = v2;
         }
 
-        public T First { get => first; set => first = value; }
-        public T Second { get => second; set => second = value; }
+        public TFirst First { get => first; set => first = value; }
+        public TSecond Second { get => second; set => second = value; }
 
         public override string ToString()
         {
             return $"{First}, {Second}";
+        }
+    }
+
+    internal class Pair<T> : Pair<T, T>
+    {
+
+        public Pair(T v1, T v2) : base(v1, v2)
+        {
         }
     }
 

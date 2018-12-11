@@ -24,6 +24,12 @@ namespace TestGenerics
 
             var pairOfPairs = new Pair<Pair<int>>(new Pair<int>(1, 2), new Pair<int>(3, 4));
             Console.WriteLine(pairOfPairs);
+
+            var intAndString = new Pair<int, string>(23, "whatever");
+            Console.WriteLine(intAndString);
+
+            var intAndInt = new Pair<int>(90, 109);
+            Console.WriteLine(intAndInt);
         }
     }
 }
