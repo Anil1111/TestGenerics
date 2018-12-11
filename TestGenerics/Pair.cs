@@ -13,6 +13,11 @@
 
         public T First { get => first; set => first = value; }
         public T Second { get => second; set => second = value; }
+
+        public override string ToString()
+        {
+            return $"{First}, {Second}";
+        }
     }
 
     internal class Pair : Pair<int>
